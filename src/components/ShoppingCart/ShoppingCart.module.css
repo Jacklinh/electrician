@@ -1,0 +1,14 @@
+.header_cart {
+    display: inline-flex;
+    align-items: center;
+    color: var(--main-color);
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 2px 10px;
+}
+.header_cart i {
+    margin-right: 10px;
+}
+.header_cart span{
+    font-weight: bold;
+}

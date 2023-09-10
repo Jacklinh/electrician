@@ -21,7 +21,7 @@
 /* product item */
 .product_wrapper{
     margin: 20px 0;
-    gap: 10px;
+    gap: 20px;
 }
 
 .product_wrapper .product_item {
@@ -79,4 +79,11 @@
     font-size: 16px;
     color: #333;
     line-height: 28px;
+}
+/* call form */
+.call_form {
+    margin-top: 20px;
+}
+.call_form p{
+    margin-bottom: 20px;
 }

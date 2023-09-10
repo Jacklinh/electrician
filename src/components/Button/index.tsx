@@ -1,10 +1,14 @@
 import React from 'react'
 import styles from './Button.module.css';
 
-const Button = ({icon,label='Default',class_color}: {icon?: React.ReactNode, label: string, class_color?: string}) => {
-    const myClass = class_color !== '' ? `${styles.btn} ${styles.class_color}` : `${styles.btn}`;
+type ButtonType = {
+    icon?: React.ReactNode,
+    label: string,
+    className?: string,
+}
+const Button = ({icon='', label='Default', className = ''}:ButtonType) => {
     return (
-        <button className={myClass} type="button">{icon} {label} </button>
+        <button className ={className !== '' ? `${styles.btn} ${styles[className]}` : styles.btn} type="button">{icon} {label} </button>
     )
 }
 

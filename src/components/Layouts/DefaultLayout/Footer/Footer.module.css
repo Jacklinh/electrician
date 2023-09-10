@@ -19,22 +19,22 @@
     padding-right: 0;
 }
 
-.footer-bottom {
+.footer_bottom {
     border-top: 1px solid #313438;
     padding-bottom: 2.7rem;
     padding-top: 2.7rem;
 }
 
 .widget_title {
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 600;
-        font-family: Poppins,sans-serif;
-        text-transform: uppercase;
-        margin: 0 0 1.3rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Poppins,sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 1.3rem;
 }
 
-footer .logo-footer {
+footer .logo_footer {
     margin-top: 1.6rem;
     margin-bottom: 1.7rem;
     max-width: 101px;

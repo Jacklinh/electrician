@@ -1,19 +1,18 @@
+import Product from "./pages/Product"
+import './App.css';
 
-
-import Header from './components/Layout/Header';
-import Footer from './components/Layout/Footer';
-import Products from './components/Products';
 function App() {
 
 	return (
 		<>
-			<Header />
+			{/* <Header />
 			<main>
 				<div className="container">
 					<Products />
 				</div>
 			</main>
-			<Footer />
+			<Footer /> */}
+			<Product />
 		</>
 	)
 }

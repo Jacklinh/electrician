@@ -1,6 +1,6 @@
 .btn {
     padding: 10px;
-    background-color: var(--main-color);
+    background-color: var(--main-color) !important;
     color: #fff;
     font-weight: 600;
     border: none;
@@ -13,7 +13,7 @@
 
 }
 .btn_dark {
-    background-color: var(--dark-color);
+    background-color: var(--dark-color) !important;
 }
 .btn svg {
     margin-right: 10px;

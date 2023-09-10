@@ -18,7 +18,7 @@ const ProductParameter = () => {
   return (
     <div id={styles.product_parameter}>
         <section className={styles.tableparameter} id={styles.tableparameter}>
-            <h2 className={styles.section_subtitle}>Thông số sản phẩm</h2>
+            <h2 className="section_subtitle">Thông số sản phẩm</h2>
             <ul className={styles.parameter}>
                 {
                     parameterList.map((item)=> <SingleProductParameter key={`SingleProductParameter_${item.id}`} props={item} />)

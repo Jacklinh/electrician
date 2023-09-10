@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Common */
+:root {
+    --main-color: #ff6700;
+    --text-color: #7A7A7A;
+    --dark-color: #303442;
+    --border-gray-color: #e7e7e7;
+    --main-width: 1200px
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* =10px */
+body {
+    font-size: 1.6rem;
+    /* =14px */
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 2.7rem;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #333;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 1.8rem;
+    color: #111;
+    font-weight: 700;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+select,
+textarea {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+button,
+.btn {
+    padding: 10px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    appearance: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+
+/* IE6 */
+*:first-child+html .clearfix {
+    zoom: 1;
+}
+
+/* IE7 */
+
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.section_subtitle {
+    display: block;
+    line-height: 1.3em;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: 600;
+}

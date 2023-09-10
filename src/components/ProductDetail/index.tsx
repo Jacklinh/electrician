@@ -1,6 +1,5 @@
-
+import React from 'react';
 import styles from './ProductDetail.module.css';
-import Numeral from 'react-numeral';
 import { policyProduct } from '../../data/policyProduct';
 import Button from '../Button';
 import {FaShoppingCart} from "react-icons/fa";
@@ -17,16 +16,20 @@ const SingleProductPrice = ({price,promo_price=0}:{price:number,promo_price?:num
     return (
         <div className={styles.product_price}>
             {
-                promo_price > 0 ? <><strong><Numeral value={promo_price} format={"0,0"} />đ</strong><del><Numeral value={price} format={"0,0"} />đ</del></> : <><strong><Numeral value={price} format={"0,0"} />đ</strong></>
+                promo_price > 0 ? <><strong>{promo_price}đ</strong><del>{price}đ</del></> : <><strong>{price}đ</strong></>
             }
             
         </div>
     )
 }
-const SingleAttrColor = ({label,current=false}:{label: string, current?: boolean}) => {
-    const currentClass = current ? `${styles.attr_name} ${styles.current}` : `${styles.attr_name}`;
+const SingleAttrColor = ({label}:{label: string}) => {
+    const [attr, setAttr] = React.useState(false);
+    const currentClass = attr ? `${styles.attr_item} ${styles.current}` : styles.attr_item;
+    const handleClickAttr = () => {
+        setAttr(!attr);
+    }
     return (
-        <span className={currentClass}>{label}</span>
+        <span onClick={handleClickAttr} className={currentClass}>{label}</span>
     )
 }
 type SinglePolicyProps = {
@@ -43,7 +46,6 @@ const SinglePolicy = ({policyProp}:{policyProp:SinglePolicyProps}) => {
         </li>
     )
 }
- 
 const ProductDetail = () => {
   return (
     <div id={styles.product_details}>
@@ -51,8 +53,8 @@ const ProductDetail = () => {
         <SingleProductPrice price={16990000} promo_price={12490000} />
         <div className={styles.product_attrs}>
             <div className={`${styles.attr_block} flex`}>
-                <SingleAttrColor label='Màu Sắc' /> 
-                <SingleAttrColor label='Đen' current={true} />
+                <span>Màu Sắc: </span>
+                <SingleAttrColor label='Đen' />
                 <SingleAttrColor label='Hồng' />
                 <SingleAttrColor label='Xanh' />
             </div>
@@ -64,7 +66,7 @@ const ProductDetail = () => {
         </ul>
         <div className={`${styles.product_actions} flex`}>
             <Button label='Thêm Giỏ Hàng' icon={<FaShoppingCart />} />
-            <Button label='Yêu thích' icon={<FaHeart />} class_color='btn_dark'/>
+            <Button label='Yêu thích' icon={<FaHeart />} className='btn_dark'/>
         </div>
         <div className={styles.call_info}>
             Hoặc gọi ngay để đặt mua: 1900 1080 (8:00-20:00)
