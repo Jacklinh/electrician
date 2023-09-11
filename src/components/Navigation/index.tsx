@@ -40,7 +40,7 @@ const SingleNavigation = ({prop}: {prop: SingleNavigationType}) => {
 const Navigation = () => {
   return (
     <nav className="items-center inline-flex">
-        <ul className="flex items-center">
+        <ul className={`${styles.nav_list} flex items-center`}>
             {
                 navList.map((item) => (
                     <SingleNavigation key={`SingleNavigation_${item.id}`} prop={item} />

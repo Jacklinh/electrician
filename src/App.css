@@ -144,7 +144,7 @@ button,
     transition: all .3s ease-out;
 }
 .modal_dialog {
-    max-width: 500px;
+    max-width: 600px;
     margin: 1.7rem auto;
     pointer-events: none;
     position: relative;
@@ -163,7 +163,7 @@ button,
 .modal_body {
     position: relative;
     flex: 1 1 auto;
-    padding: 1rem;
+    padding: 2rem;
 }
 .modal_footer {
     display: flex;
@@ -171,6 +171,6 @@ button,
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    padding: 1rem;
+    padding: 2rem;
     border-top: 2px solid #dee2e6;
 }

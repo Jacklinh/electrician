@@ -36,8 +36,8 @@
 .has_child:hover .nav_child{display: block;}
 
 
-li.actived>a, 
-li:hover>a{
+.nav_list li.actived>a, 
+.nav_list li:hover>a{
     color: var(--dark-color);
 }
 .has-child.actived:before{

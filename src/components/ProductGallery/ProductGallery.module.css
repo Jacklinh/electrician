@@ -1,3 +1,34 @@
 #gallery {
     width: 400px;
+    position: relative;
+}
+.gallery_inner {
+
+}
+.btn_control {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: var(--main-color);
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+    transform: translateY(-50%);
+}
+.btn_control.prev {
+    left: 0;
+}
+.btn_control.next {
+    right: 0;
+}
+.btn_control svg {
+    font-size: 4rem;
 }
