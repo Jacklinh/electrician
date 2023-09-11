@@ -15,6 +15,17 @@
 .btn_dark {
     background-color: var(--dark-color) !important;
 }
+.btn_dark_active {
+    background-color: var(--dark-color) !important;
+}
+.btn_dark_active svg{
+    color: var(--main-color);
+}
 .btn svg {
     margin-right: 10px;
+}
+.btn_close {
+    background-color: #5c636b !important;
+    padding: 5px 10px!important;
+    width: auto!important;
 }

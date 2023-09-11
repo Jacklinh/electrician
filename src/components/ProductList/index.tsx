@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from '../../pages/Product/Product.module.css';
 import {productsList} from '../../data/productsList';
 type SingleProductProps = {

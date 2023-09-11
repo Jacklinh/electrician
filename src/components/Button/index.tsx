@@ -5,10 +5,11 @@ type ButtonType = {
     icon?: React.ReactNode,
     label: string,
     className?: string,
+    onClick?: () => void
 }
-const Button = ({icon='', label='Default', className = ''}:ButtonType) => {
+const Button = ({icon='', label='Default', className = '', onClick}:ButtonType) => {
     return (
-        <button className ={className !== '' ? `${styles.btn} ${styles[className]}` : styles.btn} type="button">{icon} {label} </button>
+        <button onClick={onClick} className ={className !== '' ? `${styles.btn} ${styles[className]}` : styles.btn} type="button">{icon} {label} </button>
     )
 }
 

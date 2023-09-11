@@ -1,4 +1,4 @@
-import React from 'react';
+
 import DefaultLayout from '../../components/Layouts/DefaultLayout';
 import styles from './Product.module.css';
 import ProductGallery from '../../components/ProductGallery';
@@ -13,7 +13,7 @@ const Product = () => {
     return (
         <>
             <DefaultLayout>
-                <div className={`${styles.product_info_wrapper} flex`}>
+                <div className={`${styles.product_info_wrapper} flex mb-[60px]`}>
                     <ProductGallery />
                     <ProductDetail />
                     <ProductParameter />
