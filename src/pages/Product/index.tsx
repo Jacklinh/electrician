@@ -8,6 +8,7 @@ import ProductList from '../../components/ProductList';
 import ReviewsForm from '../../components/ReviewsForm';
 import Button from '../../components/Button';
 import Posts from '../../components/Posts';
+import ButtonTabs from '../../components/ButtonTabs';
 
 const Product = () => {
     return (
@@ -49,6 +50,9 @@ const Product = () => {
                             <h2 className={styles.section_subtitle}>Đánh giá Sản phẩm</h2>
                             <ReviewsForm />
                         </section>
+                        <ButtonTabs type='button' />
+                        <ButtonTabs type='text' />
+                        <ButtonTabs type='vertical' />
                     </div>
                     <div className={styles.col_sidebar}>
                         <section className={styles.callback_support}>
@@ -65,6 +69,7 @@ const Product = () => {
                         </section>
                     </div>
                 </section>
+                
             </DefaultLayout>
         </>
     )
