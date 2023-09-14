@@ -1,18 +1,13 @@
 import Product from "./pages/Product"
 import './App.css';
+import Login from "./pages/Login";
 
 function App() {
 
 	return (
 		<>
-			{/* <Header />
-			<main>
-				<div className="container">
-					<Products />
-				</div>
-			</main>
-			<Footer /> */}
-			<Product />
+			{/* <Product /> */}
+			<Login />
 		</>
 	)
 }

@@ -1,23 +1,25 @@
 import React from 'react'
 import styles from './AttrColor.module.css';
-const SingleAttrColor = ({label}:{label: string}) => {
-    const [attr, setAttr] = React.useState(false);
-    const currentClass = attr ? `${styles.attr_item} ${styles.current}` : styles.attr_item;
-    const handleClickAttr = () => {
-        setAttr(!attr);
-    }
+import { attrColor } from '../../data/attrColor';
+
+const SingleAttrColor = ({label, active=false, onClick}:{label: string, active?: boolean, onClick?: () => void}) => {
+    const currentClass = active ? `${styles.attr_item} ${styles.current}` : styles.attr_item;
     return (
-        <span onClick={handleClickAttr} className={currentClass}>{label}</span>
+        <span onClick={onClick} className={currentClass}>{label}</span>
     )
 }
 const AttrColor = () => {
+    const [attr, setAttr] = React.useState(1);
+    const handleClickAttr = (id:number) => {
+        setAttr(id);
+    }
   return (
     <div className={styles.product_attrs}>
         <div className={`${styles.attr_block} flex`}>
             <span>Màu Sắc: </span>
-            <SingleAttrColor label='Đen' />
-            <SingleAttrColor label='Hồng' />
-            <SingleAttrColor label='Xanh' />
+            {
+                attrColor.map((item) =>  <SingleAttrColor onClick={()=>handleClickAttr(item.id) } active={attr === item.id ? true : false} key={`SingleAttrColor_${item.id}`} label={item.label} />)
+            }
         </div>
     </div>
   )
